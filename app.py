@@ -1,62 +1,82 @@
 import streamlit as st
 
+# Page configuration
+st.set_page_config(page_title="Marlene – AI Landscape Call Agent", layout="centered")
+
 # App Title
-st.set_page_config(page_title="Marlene - AI Landscape Scheduling Agent", layout="centered")
-st.title("📞 Meet Marlene – Your Virtual Scheduling Assistant")
+st.title("📞 Meet Marlene – Your AI Call Answering Assistant")
+st.caption("For Testing Landscape – Serving Manatee & Sarasota County, FL")
 
-# Intro
+# About Marlene
+st.subheader("🌿 Who is Marlene?")
 st.markdown("""
-**Marlene** is a warm, professional AI call handler for **Testing Landscape**, a lawn and landscaping company serving **Manatee and Sarasota County, Florida**.
+Marlene is a voice-based AI call handler built to answer every incoming call for **Testing Landscape**, a lawn and landscaping business in **Manatee and Sarasota County, Florida**.
 
-She’s designed to:
-- Answer incoming calls quickly
-- Schedule in-person estimates
-- Confirm critical details to avoid no-shows
-- Speak with a friendly, local tone
-
----  
+She’s not just a bot — she’s the friendly, efficient front-line voice that schedules estimates, confirms key details, and ensures every lead is properly captured and followed up.
 """)
 
-# Agent Summary
-st.subheader("🌿 Agent Overview")
+# Role Summary
+st.subheader("🎯 Core Responsibilities")
 st.markdown("""
-- **Name:** Marlene  
-- **Role:** AI Call Handler & Scheduling Assistant  
-- **Company:** Testing Landscape  
-- **Service Area:** Manatee & Sarasota County, FL  
-- **Goal:** Book estimates fast. Reduce missed appointments. Deliver amazing first impressions.
+- 📞 Answer incoming calls in under 3 seconds  
+- 📅 Book in-person estimates into GoHighLevel  
+- 📍 Confirm service area eligibility  
+- 🔁 Reduce no-shows by double-confirming call details  
+- 💬 Log call transcripts and escalate when needed
 """)
 
-# Tone and Personality
-st.subheader("🗣️ Tone & Personality")
+# Tone and Voice
+st.subheader("🗣️ Marlene’s Personality")
 st.markdown("""
-- **Warm:** Like a trusted neighbor with a smile you can hear  
-- **Professional:** Courteous, clear, and competent  
-- **Efficient:** Gets the job done without wasting time  
-- **Localized:** Knows Bradenton, Lakewood Ranch, Venice, and more
+Marlene is designed to be:
+
+- **Warm**: Friendly and welcoming like a local neighbor  
+- **Professional**: Speaks clearly, respectfully, and confidently  
+- **Efficient**: Keeps calls moving with smooth transitions  
+- **Localized**: Familiar with areas like Bradenton, Lakewood Ranch, Parrish, and Venice
 """)
 
-# Sample Call Flow
-st.subheader("📋 Sample Call Script")
+# GHL Integration
+st.subheader("🔗 Connected to GoHighLevel")
+st.markdown("""
+Marlene is fully integrated with the client's **GHL sub-account**, enabling:
+
+- Calendar syncing for real-time estimate scheduling  
+- Contact creation and tagging  
+- SMS confirmations and reminders  
+- Call transcription and missed-call workflows  
+""")
+
+# Sample Call Script
+st.subheader("📋 Sample Call Flow")
 
 with st.expander("1. Greeting"):
-    st.text('"Thank you for calling Testing Landscape, this is Marlene! How can I help you beautify your lawn today?"')
+    st.code("“Thank you for calling Testing Landscape, this is Marlene! How can I help you beautify your lawn today?”")
 
-with st.expander("2. Get Info & Confirm Location"):
-    st.text('“May I get your name and the address of the property you’re calling about?”')
-    st.text('“Is this in Sarasota or Manatee County?”')
+with st.expander("2. Confirm Address & Location"):
+    st.code("“May I get the address for the property you’d like serviced?”\n“Is that in Manatee or Sarasota County?”")
 
-with st.expander("3. Schedule Estimate"):
-    st.text('“We have availability this week on Wednesday at 10 AM or Thursday at 2 PM. Which works best for you?”')
+with st.expander("3. Book the Estimate"):
+    st.code("“We have openings on Wednesday at 10 AM or Thursday at 2 PM. What works best for you?”")
 
 with st.expander("4. Confirm Details"):
-    st.text('“Just to confirm, we’re meeting at [address] on [date] at [time]. Will you be there personally?”')
-    st.text('“Is there a good number to reach you just in case?”')
+    st.code("“To confirm—we’ll meet you at [ADDRESS] on [DATE] at [TIME]. Will you be available?”\n“Is there a gate code or any access instructions?”")
 
-with st.expander("5. Close Call"):
-    st.text('“You’re all set. We look forward to helping you make your lawn amazing. Have a great day!”')
+with st.expander("5. Send Confirmation"):
+    st.code("“Awesome! You’re all set. We’ll send you a text confirmation shortly. Thanks again for calling Testing Landscape!”")
+
+# QA + Final Note
+st.subheader("📈 Improving Marlene")
+st.markdown("""
+Every call is logged with transcripts and outcomes so that the team can:
+
+- Identify confusion points  
+- Improve her training prompts  
+- Escalate leads needing human follow-up  
+""")
+
+st.success("Marlene is helping Testing Landscape never miss a lead again.")
 
 # Footer
 st.markdown("---")
-st.info("Marlene is the first line of contact for Testing Landscape—designed to book more jobs while making customers feel taken care of.")
-
+st.caption("Built with ❤️ using Streamlit by [YourName or Company]")
